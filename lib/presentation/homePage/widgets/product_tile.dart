@@ -84,6 +84,9 @@ class ProductTile extends StatelessWidget {
                         ),
                         Expanded(
                           child: Container(
+                            margin: const EdgeInsets.symmetric(
+                              horizontal: 5,
+                            ),
                             height: size.height * .25,
                             width: double.infinity,
                             decoration: BoxDecoration(
