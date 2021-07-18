@@ -1,3 +1,5 @@
+import 'package:audacity_test_project/presentation/homePage/widgets/new_arrival_card.dart';
+import 'package:audacity_test_project/presentation/homePage/widgets/product_tile.dart';
 import 'package:audacity_test_project/presentation/homePage/widgets/trending_seller_list_card.dart';
 import 'package:audacity_test_project/presentation/homePage/widgets/trending_products_list_card.dart';
 import 'package:audacity_test_project/presentation/homePage/widgets/trending_widget.dart';
@@ -32,13 +34,28 @@ class HomePage extends StatelessWidget {
                 itemCount: 5,
                 widgetName: 'Trending Products',
                 widget: TrendingProductsListCard(
-                  productName: 'FUCHKA',
-                  productPrice: '1\$',
+                  productName: 'BIRIYANI',
+                  productPrice: '5 \$',
                   productBgImage:
                       'https://static3.depositphotos.com/1003631/209/i/950/depositphotos_2099183-stock-photo-fine-table-setting-in-gourmet.jpg',
                   size: size,
                 ),
-              )
+              ),
+              ProductTile(size: size),
+              ProductTile(size: size),
+              ProductTile(size: size),
+              TrendingWidget(
+                size: size,
+                widgetName: 'New Arrivals',
+                widget: NewArrivalCard(
+                  productName: 'MM SQUARE 2.4L',
+                  productBgImage:
+                      'https://static3.depositphotos.com/1003631/209/i/950/depositphotos_2099183-stock-photo-fine-table-setting-in-gourmet.jpg',
+                  size: size,
+                  productPrice: 'Price : MYR 50.00',
+                ),
+                itemCount: 10,
+              ),
             ],
           ),
         ),

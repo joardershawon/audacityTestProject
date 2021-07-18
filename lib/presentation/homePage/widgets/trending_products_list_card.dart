@@ -26,7 +26,7 @@ class TrendingProductsListCard extends StatelessWidget {
           boxShadow: [
             BoxShadow(
               offset: Offset(2, 2),
-              color: Colors.black.withOpacity(.4),
+              color: Colors.black.withOpacity(.3),
               blurRadius: 2,
             ),
           ],

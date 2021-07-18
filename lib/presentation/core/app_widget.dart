@@ -13,15 +13,20 @@ class MyApp extends StatelessWidget {
         accentColor: Color(0xff628395),
         primaryColor: Color(0xffFFA0A0),
         textTheme: TextTheme(
-          bodyText1: TextStyle(
-            color: Colors.grey,
-            fontWeight: FontWeight.bold,
-            fontSize: 16,
-          ),
-          bodyText2: TextStyle(
+          subtitle1: TextStyle(
             color: Colors.black,
             fontWeight: FontWeight.bold,
             fontSize: 16,
+          ),
+          subtitle2: TextStyle(
+            color: Colors.grey,
+            // fontWeight: FontWeight.bold,
+            fontSize: 12,
+          ),
+          bodyText2: TextStyle(
+            color: Colors.black,
+            // fontWeight: FontWeight.bold,
+            fontSize: 17,
           ),
         ),
       ),

@@ -39,7 +39,10 @@ class TrendingWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(widgetName!),
+          Text(
+            widgetName!,
+            style: Theme.of(context).textTheme.subtitle1,
+          ),
           Container(
             height: size.height * .18,
             child: ListView.builder(
