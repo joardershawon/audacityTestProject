@@ -1,16 +1,12 @@
+import 'package:audacity_test_project/presentation/homePage/widgets/new_arrival_card.dart';
 import 'package:flutter/material.dart';
 
-class TrendingWidget extends StatelessWidget {
-  const TrendingWidget({
+class NewArrivalWidget extends StatelessWidget {
+  const NewArrivalWidget({
     Key? key,
     required this.size,
-    @required this.widgetName,
-    @required this.widget,
-    @required this.itemCount,
   }) : super(key: key);
-  final String? widgetName;
-  final int? itemCount;
-  final Widget? widget;
+
   final Size size;
 
   @override
@@ -40,16 +36,22 @@ class TrendingWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            widgetName!,
+            'New Arrivals',
             style: Theme.of(context).textTheme.subtitle1,
           ),
           Container(
-            height: size.height * .18,
+            height: size.height * .19,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
-              itemCount: itemCount,
+              itemCount: 10,
               itemBuilder: (context, index) {
-                return widget!;
+                return NewArrivalCard(
+                  productName: 'MM SQUARE 2.4L',
+                  productBgImage:
+                      'https://static3.depositphotos.com/1003631/209/i/950/depositphotos_2099183-stock-photo-fine-table-setting-in-gourmet.jpg',
+                  size: size,
+                  productPrice: 'Price : MYR 50.00',
+                );
               },
             ),
           ),

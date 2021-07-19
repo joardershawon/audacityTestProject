@@ -4,9 +4,24 @@ class ProductTile extends StatelessWidget {
   const ProductTile({
     Key? key,
     required this.size,
+    @required this.companyName,
+    @required this.postTime,
+    @required this.description,
+    @required this.price,
+    @required this.availableStock,
+    @required this.orders,
+    @required this.image,
   }) : super(key: key);
 
   final Size size;
+
+  final String? companyName,
+      image,
+      postTime,
+      description,
+      price,
+      availableStock,
+      orders;
 
   @override
   Widget build(BuildContext context) {
@@ -43,11 +58,11 @@ class ProductTile extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'Green Success Trading and Data',
+                              companyName!,
                               style: Theme.of(context).textTheme.subtitle1,
                             ),
                             Text(
-                              '2 minutes (ago)',
+                              '$postTime minutes (ago)',
                               style: Theme.of(context).textTheme.subtitle2,
                             )
                           ],
@@ -75,7 +90,7 @@ class ProductTile extends StatelessWidget {
                               horizontal: 5,
                             ),
                             child: Text(
-                              'Nurul Aman has made payment and bought Korean Chicken Crispy for MYR 9',
+                              description!,
                             ),
                           ),
                         ),
@@ -92,8 +107,7 @@ class ProductTile extends StatelessWidget {
                             decoration: BoxDecoration(
                               image: DecorationImage(
                                 fit: BoxFit.cover,
-                                image: NetworkImage(
-                                    'https://static3.depositphotos.com/1003631/209/i/950/depositphotos_2099183-stock-photo-fine-table-setting-in-gourmet.jpg'),
+                                image: NetworkImage(image!),
                               ),
                             ),
                           ),
@@ -117,7 +131,7 @@ class ProductTile extends StatelessWidget {
                                 Icons.shop,
                               ),
                               Text(
-                                'MYR 9.00',
+                                'MYR $price.00',
                                 style: Theme.of(context).textTheme.subtitle1,
                               ),
                             ],
@@ -130,7 +144,7 @@ class ProductTile extends StatelessWidget {
                                 Icons.menu,
                               ),
                               Text(
-                                '20 Available Stock',
+                                '$availableStock Available Stock',
                                 style: Theme.of(context)
                                     .textTheme
                                     .subtitle1!
@@ -146,7 +160,7 @@ class ProductTile extends StatelessWidget {
                                 Icons.shopping_cart,
                               ),
                               Text(
-                                '1 Order(s)',
+                                '$orders Order(s)',
                                 style: Theme.of(context)
                                     .textTheme
                                     .subtitle1!
