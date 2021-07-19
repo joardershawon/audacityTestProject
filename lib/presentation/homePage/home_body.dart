@@ -22,11 +22,19 @@ class HomePageBody extends StatelessWidget {
             size: size,
           ),
           TrendingProductsWidget(size: size),
+          // Container(
+          //   height: size.height * 3,
+          //   child: ListView(
+          //     children: [
+
+          //     ],
+          //   ),
+          // ),
           ProductTile(
             size: size,
             companyName: 'Green Success Trading and Data',
             postTime: '2',
-            description:
+            caption:
                 'Nurul Aman has made payment and bought Korean Chicken Crispy for MYR 9',
             image:
                 'https://static3.depositphotos.com/1003631/209/i/950/depositphotos_2099183-stock-photo-fine-table-setting-in-gourmet.jpg',
@@ -38,7 +46,7 @@ class HomePageBody extends StatelessWidget {
             size: size,
             companyName: 'Green Success Trading and Data',
             postTime: '2',
-            description:
+            caption:
                 'Nurul Aman has made payment and bought Korean Chicken Crispy for MYR 9',
             image:
                 'https://static3.depositphotos.com/1003631/209/i/950/depositphotos_2099183-stock-photo-fine-table-setting-in-gourmet.jpg',
@@ -50,7 +58,7 @@ class HomePageBody extends StatelessWidget {
             size: size,
             companyName: 'Green Success Trading and Data',
             postTime: '2',
-            description:
+            caption:
                 'Nurul Aman has made payment and bought Korean Chicken Crispy for MYR 9',
             image:
                 'https://static3.depositphotos.com/1003631/209/i/950/depositphotos_2099183-stock-photo-fine-table-setting-in-gourmet.jpg',
@@ -63,7 +71,7 @@ class HomePageBody extends StatelessWidget {
             size: size,
             companyName: 'Green Success Trading and Data',
             postTime: '2',
-            description:
+            caption:
                 'Nurul Aman has made payment and bought Korean Chicken Crispy for MYR 9',
             image:
                 'https://static3.depositphotos.com/1003631/209/i/950/depositphotos_2099183-stock-photo-fine-table-setting-in-gourmet.jpg',
@@ -75,7 +83,7 @@ class HomePageBody extends StatelessWidget {
             size: size,
             companyName: 'Green Success Trading and Data',
             postTime: '2',
-            description:
+            caption:
                 'Nurul Aman has made payment and bought Korean Chicken Crispy for MYR 9',
             image:
                 'https://static3.depositphotos.com/1003631/209/i/950/depositphotos_2099183-stock-photo-fine-table-setting-in-gourmet.jpg',
@@ -87,7 +95,7 @@ class HomePageBody extends StatelessWidget {
             size: size,
             companyName: 'Green Success Trading and Data',
             postTime: '2',
-            description:
+            caption:
                 'Nurul Aman has made payment and bought Korean Chicken Crispy for MYR 9',
             image:
                 'https://static3.depositphotos.com/1003631/209/i/950/depositphotos_2099183-stock-photo-fine-table-setting-in-gourmet.jpg',

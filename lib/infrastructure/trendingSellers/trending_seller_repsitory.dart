@@ -30,7 +30,6 @@ class TrendingSellerRepository implements ITrendingSellersRepository {
       final catresponse = await http.get(Uri.parse(ApiPath.trendingSellerApi));
 
       List data = jsonDecode(catresponse.body)[0];
-      print(data);
 
       final factoredData =
           data.map((e) => TrendingSellerDto.fromJson(e).toDomain()).toList();

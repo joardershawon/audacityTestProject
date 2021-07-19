@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class TrendingProductsListCard extends StatelessWidget {
@@ -34,43 +35,49 @@ class TrendingProductsListCard extends StatelessWidget {
         child: ClipRRect(
           borderRadius: BorderRadius.circular(10),
           child: Container(
-            width: size!.width * .27,
+            width: size!.width * .3,
             decoration: BoxDecoration(
-              color: Colors.white,
-            ),
+                color: Colors.white,
+                image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: CachedNetworkImageProvider(
+                    productBgImage!,
+                  ),
+                )),
             child: Column(
               children: [
-                Expanded(
-                  child: Image.network(
-                    productBgImage!,
-                    fit: BoxFit.fill,
-                  ),
-                ),
-                Container(
-                  padding: const EdgeInsets.all(5),
-                  color: Colors.white,
-                  child: Column(
-                    children: [
-                      Text(
-                        productName!,
-                        overflow: TextOverflow.ellipsis,
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 15,
+                const Spacer(),
+                Row(
+                  children: [
+                    Expanded(
+                      child: Container(
+                        padding: const EdgeInsets.all(5),
+                        color: Colors.white,
+                        child: Column(
+                          children: [
+                            Text(
+                              productName!,
+                              // overflow: TextOverflow.ellipsis,
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 13,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                            Text(
+                              productPrice!,
+                              style: TextStyle(
+                                color: Colors.grey,
+                                fontSize: 12,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                          ],
                         ),
-                        textAlign: TextAlign.center,
                       ),
-                      Text(
-                        productPrice!,
-                        style: TextStyle(
-                          color: Colors.grey,
-                          fontSize: 12,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ],
-                  ),
+                    ),
+                  ],
                 )
               ],
             ),

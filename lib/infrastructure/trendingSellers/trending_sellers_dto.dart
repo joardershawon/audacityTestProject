@@ -23,17 +23,17 @@ abstract class TrendingSellerDto implements _$TrendingSellerDto {
 
   TrendingSeller toDomain() {
     return TrendingSeller(
-      sellersSLNo: SellersSLNo(slNo),
-      sellerName: SellerName(sellerName),
-      sellerProfilePhoto: SellerProfilePhoto(sellerProfilePhoto),
-      sellerItemPhoto: SellerItemPhoto(sellerItemPhoto!),
-      sellerCity: SellerCity(city == null ? 'n' : city!),
-      sellerState: SellerState(state == null ? 'none' : state!),
-      sellerCurrencyCode: SellerCurrencyCode(currencyCode!),
-      sellerOrderQty: SellerOrderQty(orderQty!),
-      sellerOrderAmount: SellerOrderAmount(orderAmount!),
-      sellerSalesQty: SellerSalesQty(salesQty!),
-      sellerSalesAmount: SellerSalesAmount(salesAmount!),
+      sellersSLNo: SellersSLNo(slNo ?? 'null'),
+      sellerName: SellerName(sellerName ?? 'null'),
+      sellerProfilePhoto: SellerProfilePhoto(sellerProfilePhoto ?? 'null'),
+      sellerItemPhoto: SellerItemPhoto(sellerItemPhoto ?? 'null'),
+      sellerCity: SellerCity(city ?? 'null'),
+      sellerState: SellerState(state ?? 'null'),
+      sellerCurrencyCode: SellerCurrencyCode(currencyCode ?? 'null'),
+      sellerOrderQty: SellerOrderQty(orderQty ?? 0),
+      sellerOrderAmount: SellerOrderAmount(orderAmount ?? 0),
+      sellerSalesQty: SellerSalesQty(salesQty ?? 0),
+      sellerSalesAmount: SellerSalesAmount(salesAmount ?? 0),
     );
   }
 

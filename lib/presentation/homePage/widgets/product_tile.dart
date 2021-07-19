@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class ProductTile extends StatelessWidget {
@@ -6,7 +7,7 @@ class ProductTile extends StatelessWidget {
     required this.size,
     @required this.companyName,
     @required this.postTime,
-    @required this.description,
+    @required this.caption,
     @required this.price,
     @required this.availableStock,
     @required this.orders,
@@ -18,7 +19,7 @@ class ProductTile extends StatelessWidget {
   final String? companyName,
       image,
       postTime,
-      description,
+      caption,
       price,
       availableStock,
       orders;
@@ -55,6 +56,8 @@ class ProductTile extends StatelessWidget {
                       children: [
                         CircleAvatar(
                           radius: 25,
+                          //*TODO : setImage //
+                          // backgroundImage: CachedNetworkImageProvider(''),
                         ),
                         const SizedBox(
                           width: 10,
@@ -67,7 +70,7 @@ class ProductTile extends StatelessWidget {
                               style: Theme.of(context).textTheme.subtitle1,
                             ),
                             Text(
-                              '$postTime minutes (ago)',
+                              postTime!,
                               style: Theme.of(context).textTheme.subtitle2,
                             )
                           ],
@@ -95,7 +98,7 @@ class ProductTile extends StatelessWidget {
                               horizontal: 5,
                             ),
                             child: Text(
-                              description!,
+                              caption!,
                             ),
                           ),
                         ),
@@ -112,7 +115,7 @@ class ProductTile extends StatelessWidget {
                             decoration: BoxDecoration(
                               image: DecorationImage(
                                 fit: BoxFit.cover,
-                                image: NetworkImage(image!),
+                                image: CachedNetworkImageProvider(image!),
                               ),
                             ),
                           ),
@@ -137,7 +140,10 @@ class ProductTile extends StatelessWidget {
                               ),
                               Text(
                                 'MYR $price.00',
-                                style: Theme.of(context).textTheme.subtitle1,
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .subtitle1!
+                                    .copyWith(fontSize: 12),
                               ),
                             ],
                           ),
@@ -153,7 +159,7 @@ class ProductTile extends StatelessWidget {
                                 style: Theme.of(context)
                                     .textTheme
                                     .subtitle1!
-                                    .copyWith(fontSize: 14),
+                                    .copyWith(fontSize: 12),
                               ),
                             ],
                           ),
@@ -169,7 +175,7 @@ class ProductTile extends StatelessWidget {
                                 style: Theme.of(context)
                                     .textTheme
                                     .subtitle1!
-                                    .copyWith(fontSize: 14),
+                                    .copyWith(fontSize: 12),
                               ),
                             ],
                           ),

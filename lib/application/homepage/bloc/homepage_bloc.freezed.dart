@@ -158,9 +158,11 @@ class _$HomepageStateTearOff {
     return const _Loading();
   }
 
-  _LoadSuccess loadSuccess(List<TrendingSeller> trendingSeller) {
+  _LoadSuccess loadSuccess(List<TrendingSeller> trendingSeller,
+      List<TrendingProduct> trendingProduct) {
     return _LoadSuccess(
       trendingSeller,
+      trendingProduct,
     );
   }
 }
@@ -174,14 +176,18 @@ mixin _$HomepageState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<TrendingSeller> trendingSeller) loadSuccess,
+    required TResult Function(List<TrendingSeller> trendingSeller,
+            List<TrendingProduct> trendingProduct)
+        loadSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<TrendingSeller> trendingSeller)? loadSuccess,
+    TResult Function(List<TrendingSeller> trendingSeller,
+            List<TrendingProduct> trendingProduct)?
+        loadSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -258,7 +264,9 @@ class _$_Initial implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<TrendingSeller> trendingSeller) loadSuccess,
+    required TResult Function(List<TrendingSeller> trendingSeller,
+            List<TrendingProduct> trendingProduct)
+        loadSuccess,
   }) {
     return initial();
   }
@@ -268,7 +276,9 @@ class _$_Initial implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<TrendingSeller> trendingSeller)? loadSuccess,
+    TResult Function(List<TrendingSeller> trendingSeller,
+            List<TrendingProduct> trendingProduct)?
+        loadSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -345,7 +355,9 @@ class _$_Loading implements _Loading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<TrendingSeller> trendingSeller) loadSuccess,
+    required TResult Function(List<TrendingSeller> trendingSeller,
+            List<TrendingProduct> trendingProduct)
+        loadSuccess,
   }) {
     return loading();
   }
@@ -355,7 +367,9 @@ class _$_Loading implements _Loading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<TrendingSeller> trendingSeller)? loadSuccess,
+    TResult Function(List<TrendingSeller> trendingSeller,
+            List<TrendingProduct> trendingProduct)?
+        loadSuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -398,7 +412,9 @@ abstract class _$LoadSuccessCopyWith<$Res> {
   factory _$LoadSuccessCopyWith(
           _LoadSuccess value, $Res Function(_LoadSuccess) then) =
       __$LoadSuccessCopyWithImpl<$Res>;
-  $Res call({List<TrendingSeller> trendingSeller});
+  $Res call(
+      {List<TrendingSeller> trendingSeller,
+      List<TrendingProduct> trendingProduct});
 }
 
 /// @nodoc
@@ -414,12 +430,17 @@ class __$LoadSuccessCopyWithImpl<$Res> extends _$HomepageStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? trendingSeller = freezed,
+    Object? trendingProduct = freezed,
   }) {
     return _then(_LoadSuccess(
       trendingSeller == freezed
           ? _value.trendingSeller
           : trendingSeller // ignore: cast_nullable_to_non_nullable
               as List<TrendingSeller>,
+      trendingProduct == freezed
+          ? _value.trendingProduct
+          : trendingProduct // ignore: cast_nullable_to_non_nullable
+              as List<TrendingProduct>,
     ));
   }
 }
@@ -427,14 +448,16 @@ class __$LoadSuccessCopyWithImpl<$Res> extends _$HomepageStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_LoadSuccess implements _LoadSuccess {
-  const _$_LoadSuccess(this.trendingSeller);
+  const _$_LoadSuccess(this.trendingSeller, this.trendingProduct);
 
   @override
   final List<TrendingSeller> trendingSeller;
+  @override
+  final List<TrendingProduct> trendingProduct;
 
   @override
   String toString() {
-    return 'HomepageState.loadSuccess(trendingSeller: $trendingSeller)';
+    return 'HomepageState.loadSuccess(trendingSeller: $trendingSeller, trendingProduct: $trendingProduct)';
   }
 
   @override
@@ -443,13 +466,17 @@ class _$_LoadSuccess implements _LoadSuccess {
         (other is _LoadSuccess &&
             (identical(other.trendingSeller, trendingSeller) ||
                 const DeepCollectionEquality()
-                    .equals(other.trendingSeller, trendingSeller)));
+                    .equals(other.trendingSeller, trendingSeller)) &&
+            (identical(other.trendingProduct, trendingProduct) ||
+                const DeepCollectionEquality()
+                    .equals(other.trendingProduct, trendingProduct)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(trendingSeller);
+      const DeepCollectionEquality().hash(trendingSeller) ^
+      const DeepCollectionEquality().hash(trendingProduct);
 
   @JsonKey(ignore: true)
   @override
@@ -461,9 +488,11 @@ class _$_LoadSuccess implements _LoadSuccess {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<TrendingSeller> trendingSeller) loadSuccess,
+    required TResult Function(List<TrendingSeller> trendingSeller,
+            List<TrendingProduct> trendingProduct)
+        loadSuccess,
   }) {
-    return loadSuccess(trendingSeller);
+    return loadSuccess(trendingSeller, trendingProduct);
   }
 
   @override
@@ -471,11 +500,13 @@ class _$_LoadSuccess implements _LoadSuccess {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<TrendingSeller> trendingSeller)? loadSuccess,
+    TResult Function(List<TrendingSeller> trendingSeller,
+            List<TrendingProduct> trendingProduct)?
+        loadSuccess,
     required TResult orElse(),
   }) {
     if (loadSuccess != null) {
-      return loadSuccess(trendingSeller);
+      return loadSuccess(trendingSeller, trendingProduct);
     }
     return orElse();
   }
@@ -506,10 +537,12 @@ class _$_LoadSuccess implements _LoadSuccess {
 }
 
 abstract class _LoadSuccess implements HomepageState {
-  const factory _LoadSuccess(List<TrendingSeller> trendingSeller) =
-      _$_LoadSuccess;
+  const factory _LoadSuccess(List<TrendingSeller> trendingSeller,
+      List<TrendingProduct> trendingProduct) = _$_LoadSuccess;
 
   List<TrendingSeller> get trendingSeller => throw _privateConstructorUsedError;
+  List<TrendingProduct> get trendingProduct =>
+      throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   _$LoadSuccessCopyWith<_LoadSuccess> get copyWith =>
       throw _privateConstructorUsedError;

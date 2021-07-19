@@ -6,5 +6,6 @@ class HomepageState with _$HomepageState {
   const factory HomepageState.loading() = _Loading;
   const factory HomepageState.loadSuccess(
     List<TrendingSeller> trendingSeller,
+    List<TrendingProduct> trendingProduct,
   ) = _LoadSuccess;
 }

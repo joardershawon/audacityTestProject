@@ -43,6 +43,7 @@ class TrendingSellerListCard extends StatelessWidget {
                   backgroundColor: Theme.of(context).accentColor,
                   backgroundImage: CachedNetworkImageProvider(
                     sellerCircleImage!,
+                    errorListener: () => Text('Invalid Url'),
                   ),
                 ),
               ),
@@ -52,7 +53,7 @@ class TrendingSellerListCard extends StatelessWidget {
                 bottom: 0,
                 child: Container(
                   height: size!.height * .05,
-                  padding: const EdgeInsets.all(5),
+                  padding: const EdgeInsets.symmetric(horizontal: 5),
                   color: Colors.black45,
                   child: Center(
                     child: Text(
