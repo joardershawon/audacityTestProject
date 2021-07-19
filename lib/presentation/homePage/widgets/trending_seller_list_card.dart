@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class TrendingSellerListCard extends StatelessWidget {
@@ -24,9 +25,10 @@ class TrendingSellerListCard extends StatelessWidget {
           decoration: BoxDecoration(
             color: Colors.white,
             image: DecorationImage(
-              fit: BoxFit.fill,
-              image: NetworkImage(
+              fit: BoxFit.cover,
+              image: CachedNetworkImageProvider(
                 sellerBgImage!,
+                errorListener: () => Text('ERROR'),
               ),
             ),
           ),
@@ -39,7 +41,7 @@ class TrendingSellerListCard extends StatelessWidget {
                 child: CircleAvatar(
                   radius: 25,
                   backgroundColor: Theme.of(context).accentColor,
-                  backgroundImage: NetworkImage(
+                  backgroundImage: CachedNetworkImageProvider(
                     sellerCircleImage!,
                   ),
                 ),
@@ -49,15 +51,18 @@ class TrendingSellerListCard extends StatelessWidget {
                 left: 0,
                 bottom: 0,
                 child: Container(
+                  height: size!.height * .05,
                   padding: const EdgeInsets.all(5),
                   color: Colors.black45,
-                  child: Text(
-                    sellerName!,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 10,
+                  child: Center(
+                    child: Text(
+                      sellerName!,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 11,
+                      ),
+                      textAlign: TextAlign.center,
                     ),
-                    textAlign: TextAlign.center,
                   ),
                 ),
               )

@@ -49,11 +49,16 @@ class ProductTile extends StatelessWidget {
                 Expanded(
                   flex: 0,
                   child: Container(
-                    padding: const EdgeInsets.all(5),
+                    padding: const EdgeInsets.all(10),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        CircleAvatar(),
+                        CircleAvatar(
+                          radius: 25,
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
