@@ -61,7 +61,7 @@ class TrendingProductsListCard extends StatelessWidget {
                               style: TextStyle(
                                 color: Colors.black,
                                 fontWeight: FontWeight.bold,
-                                fontSize: 13,
+                                fontSize: 10,
                               ),
                               textAlign: TextAlign.center,
                             ),
@@ -69,7 +69,7 @@ class TrendingProductsListCard extends StatelessWidget {
                               productPrice!,
                               style: TextStyle(
                                 color: Colors.grey,
-                                fontSize: 12,
+                                fontSize: 8,
                               ),
                               textAlign: TextAlign.center,
                             ),

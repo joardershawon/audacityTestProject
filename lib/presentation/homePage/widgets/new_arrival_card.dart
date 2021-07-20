@@ -65,7 +65,7 @@ class NewArrivalCard extends StatelessWidget {
                           style: TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.bold,
-                            fontSize: 14,
+                            fontSize: 10,
                           ),
                           textAlign: TextAlign.center,
                         ),
@@ -73,7 +73,7 @@ class NewArrivalCard extends StatelessWidget {
                           productPrice!,
                           style: TextStyle(
                             color: Colors.grey,
-                            fontSize: 12,
+                            fontSize: 8,
                           ),
                           textAlign: TextAlign.center,
                         ),

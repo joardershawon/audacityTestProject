@@ -53,8 +53,8 @@ class ProductTile extends StatelessWidget {
                                 radius: 25,
                                 //* Circular Image/ShopLogo //
                                 backgroundImage: CachedNetworkImageProvider(
-                                    state.products[index!].productShopLogo!
-                                        .value),
+                                  state.products[index!].productShopLogo!.value,
+                                ),
                               ),
                               const SizedBox(
                                 width: 10,
@@ -144,7 +144,7 @@ class ProductTile extends StatelessWidget {
                                 child: Row(
                                   children: [
                                     Icon(
-                                      Icons.shop,
+                                      Icons.shopping_bag_outlined,
                                     ),
                                     Text(
                                       '${state.products[index!].productCurrencyCode!.value} ${state.products[index!].productUnitPrice!.value.toString()}'
