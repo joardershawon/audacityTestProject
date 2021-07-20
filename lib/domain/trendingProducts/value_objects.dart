@@ -1,49 +1,49 @@
 import 'package:audacity_test_project/domain/core/value_object.dart';
 
-class ProductSlNo extends ValueObject<String> {
+class TrendingProductSlNo extends ValueObject<String> {
   final String value;
-  factory ProductSlNo(String? input) {
-    return ProductSlNo._(input!);
+  factory TrendingProductSlNo(String? input) {
+    return TrendingProductSlNo._(input!);
   }
-  const ProductSlNo._(this.value);
+  const TrendingProductSlNo._(this.value);
 }
 
-class ProductName extends ValueObject<String> {
+class TrendingProductName extends ValueObject<String> {
   final String value;
-  factory ProductName(String? input) {
-    return ProductName._(input!);
+  factory TrendingProductName(String? input) {
+    return TrendingProductName._(input!);
   }
-  const ProductName._(this.value);
+  const TrendingProductName._(this.value);
 }
 
-class ProductShortDetails extends ValueObject<String> {
+class TrendingProductShortDetails extends ValueObject<String> {
   final String value;
-  factory ProductShortDetails(String? input) {
-    return ProductShortDetails._(input!);
+  factory TrendingProductShortDetails(String? input) {
+    return TrendingProductShortDetails._(input!);
   }
-  const ProductShortDetails._(this.value);
+  const TrendingProductShortDetails._(this.value);
 }
 
-class ProductImage extends ValueObject<String> {
+class TrendingProductImage extends ValueObject<String> {
   final String value;
-  factory ProductImage(String? input) {
-    return ProductImage._(input!);
+  factory TrendingProductImage(String? input) {
+    return TrendingProductImage._(input!);
   }
-  const ProductImage._(this.value);
+  const TrendingProductImage._(this.value);
 }
 
-class ProductSellerName extends ValueObject<String> {
+class TrendingProductSellerName extends ValueObject<String> {
   final String value;
-  factory ProductSellerName(String? input) {
-    return ProductSellerName._(input!);
+  factory TrendingProductSellerName(String? input) {
+    return TrendingProductSellerName._(input!);
   }
-  const ProductSellerName._(this.value);
+  const TrendingProductSellerName._(this.value);
 }
 
-class ProductAvailableStock extends ValueObject<int> {
+class TrendingProductAvailableStock extends ValueObject<int> {
   final int value;
-  factory ProductAvailableStock(int? input) {
-    return ProductAvailableStock._(input!);
+  factory TrendingProductAvailableStock(int? input) {
+    return TrendingProductAvailableStock._(input!);
   }
-  const ProductAvailableStock._(this.value);
+  const TrendingProductAvailableStock._(this.value);
 }

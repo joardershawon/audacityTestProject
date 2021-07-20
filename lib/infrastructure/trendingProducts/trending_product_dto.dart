@@ -18,12 +18,13 @@ abstract class TrendingProductDto implements _$TrendingProductDto {
 
   TrendingProduct toDomain() {
     return TrendingProduct(
-      productSlNo: ProductSlNo(slNo ?? 'n'),
-      productName: ProductName(productName),
-      productShortDetails: ProductShortDetails(shortDetails),
-      productImage: ProductImage(productImage),
-      productSellerName: ProductSellerName(sellerName),
-      productAvailableStock: ProductAvailableStock(availableStock),
+      trendingproductSlNo: TrendingProductSlNo(slNo ?? 'n'),
+      trendingproductName: TrendingProductName(productName),
+      trendingproductShortDetails: TrendingProductShortDetails(shortDetails),
+      trendingproductImage: TrendingProductImage(productImage),
+      trendingproductSellerName: TrendingProductSellerName(sellerName),
+      trendingproductAvailableStock:
+          TrendingProductAvailableStock(availableStock),
     );
   }
 

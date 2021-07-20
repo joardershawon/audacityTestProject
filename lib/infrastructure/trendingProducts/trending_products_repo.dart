@@ -13,7 +13,7 @@ import 'package:audacity_test_project/infrastructure/trendingProducts/trending_p
 @LazySingleton(as: ITrendingProductRepository)
 class TrendingProductsRepsitory implements ITrendingProductRepository {
   @override
-  Future<List<TrendingProduct>> watchAllProducts() async {
+  Future<List<TrendingProduct>> watchAllTrendingProducts() async {
     String fileName = 'trendingproductsdata.json';
     var dir = await getTemporaryDirectory();
 

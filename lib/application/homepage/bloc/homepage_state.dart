@@ -7,5 +7,6 @@ class HomepageState with _$HomepageState {
   const factory HomepageState.loadSuccess(
     List<TrendingSeller> trendingSeller,
     List<TrendingProduct> trendingProduct,
+    List<Product> products,
   ) = _LoadSuccess;
 }

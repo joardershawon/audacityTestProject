@@ -54,12 +54,12 @@ class TrendingProductsWidget extends StatelessWidget {
                       itemCount: state.trendingProduct.length,
                       itemBuilder: (context, index) {
                         return TrendingProductsListCard(
-                          productName:
-                              state.trendingProduct[index].productName!.value,
+                          productName: state.trendingProduct[index]
+                              .trendingproductName!.value,
                           productPrice: state.trendingProduct[index]
-                              .productShortDetails!.value,
-                          productBgImage:
-                              state.trendingProduct[index].productImage!.value,
+                              .trendingproductShortDetails!.value,
+                          productBgImage: state.trendingProduct[index]
+                              .trendingproductImage!.value,
                           size: size,
                         );
                       },

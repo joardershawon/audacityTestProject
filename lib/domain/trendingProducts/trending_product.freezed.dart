@@ -17,19 +17,19 @@ class _$TrendingProductTearOff {
   const _$TrendingProductTearOff();
 
   _TrendingProduct call(
-      {ProductSlNo? productSlNo,
-      ProductName? productName,
-      ProductShortDetails? productShortDetails,
-      ProductImage? productImage,
-      ProductSellerName? productSellerName,
-      ProductAvailableStock? productAvailableStock}) {
+      {TrendingProductSlNo? trendingproductSlNo,
+      TrendingProductName? trendingproductName,
+      TrendingProductShortDetails? trendingproductShortDetails,
+      TrendingProductImage? trendingproductImage,
+      TrendingProductSellerName? trendingproductSellerName,
+      TrendingProductAvailableStock? trendingproductAvailableStock}) {
     return _TrendingProduct(
-      productSlNo: productSlNo,
-      productName: productName,
-      productShortDetails: productShortDetails,
-      productImage: productImage,
-      productSellerName: productSellerName,
-      productAvailableStock: productAvailableStock,
+      trendingproductSlNo: trendingproductSlNo,
+      trendingproductName: trendingproductName,
+      trendingproductShortDetails: trendingproductShortDetails,
+      trendingproductImage: trendingproductImage,
+      trendingproductSellerName: trendingproductSellerName,
+      trendingproductAvailableStock: trendingproductAvailableStock,
     );
   }
 }
@@ -39,14 +39,17 @@ const $TrendingProduct = _$TrendingProductTearOff();
 
 /// @nodoc
 mixin _$TrendingProduct {
-  ProductSlNo? get productSlNo => throw _privateConstructorUsedError;
-  ProductName? get productName => throw _privateConstructorUsedError;
-  ProductShortDetails? get productShortDetails =>
+  TrendingProductSlNo? get trendingproductSlNo =>
       throw _privateConstructorUsedError;
-  ProductImage? get productImage => throw _privateConstructorUsedError;
-  ProductSellerName? get productSellerName =>
+  TrendingProductName? get trendingproductName =>
       throw _privateConstructorUsedError;
-  ProductAvailableStock? get productAvailableStock =>
+  TrendingProductShortDetails? get trendingproductShortDetails =>
+      throw _privateConstructorUsedError;
+  TrendingProductImage? get trendingproductImage =>
+      throw _privateConstructorUsedError;
+  TrendingProductSellerName? get trendingproductSellerName =>
+      throw _privateConstructorUsedError;
+  TrendingProductAvailableStock? get trendingproductAvailableStock =>
       throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -60,12 +63,12 @@ abstract class $TrendingProductCopyWith<$Res> {
           TrendingProduct value, $Res Function(TrendingProduct) then) =
       _$TrendingProductCopyWithImpl<$Res>;
   $Res call(
-      {ProductSlNo? productSlNo,
-      ProductName? productName,
-      ProductShortDetails? productShortDetails,
-      ProductImage? productImage,
-      ProductSellerName? productSellerName,
-      ProductAvailableStock? productAvailableStock});
+      {TrendingProductSlNo? trendingproductSlNo,
+      TrendingProductName? trendingproductName,
+      TrendingProductShortDetails? trendingproductShortDetails,
+      TrendingProductImage? trendingproductImage,
+      TrendingProductSellerName? trendingproductSellerName,
+      TrendingProductAvailableStock? trendingproductAvailableStock});
 }
 
 /// @nodoc
@@ -79,38 +82,38 @@ class _$TrendingProductCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? productSlNo = freezed,
-    Object? productName = freezed,
-    Object? productShortDetails = freezed,
-    Object? productImage = freezed,
-    Object? productSellerName = freezed,
-    Object? productAvailableStock = freezed,
+    Object? trendingproductSlNo = freezed,
+    Object? trendingproductName = freezed,
+    Object? trendingproductShortDetails = freezed,
+    Object? trendingproductImage = freezed,
+    Object? trendingproductSellerName = freezed,
+    Object? trendingproductAvailableStock = freezed,
   }) {
     return _then(_value.copyWith(
-      productSlNo: productSlNo == freezed
-          ? _value.productSlNo
-          : productSlNo // ignore: cast_nullable_to_non_nullable
-              as ProductSlNo?,
-      productName: productName == freezed
-          ? _value.productName
-          : productName // ignore: cast_nullable_to_non_nullable
-              as ProductName?,
-      productShortDetails: productShortDetails == freezed
-          ? _value.productShortDetails
-          : productShortDetails // ignore: cast_nullable_to_non_nullable
-              as ProductShortDetails?,
-      productImage: productImage == freezed
-          ? _value.productImage
-          : productImage // ignore: cast_nullable_to_non_nullable
-              as ProductImage?,
-      productSellerName: productSellerName == freezed
-          ? _value.productSellerName
-          : productSellerName // ignore: cast_nullable_to_non_nullable
-              as ProductSellerName?,
-      productAvailableStock: productAvailableStock == freezed
-          ? _value.productAvailableStock
-          : productAvailableStock // ignore: cast_nullable_to_non_nullable
-              as ProductAvailableStock?,
+      trendingproductSlNo: trendingproductSlNo == freezed
+          ? _value.trendingproductSlNo
+          : trendingproductSlNo // ignore: cast_nullable_to_non_nullable
+              as TrendingProductSlNo?,
+      trendingproductName: trendingproductName == freezed
+          ? _value.trendingproductName
+          : trendingproductName // ignore: cast_nullable_to_non_nullable
+              as TrendingProductName?,
+      trendingproductShortDetails: trendingproductShortDetails == freezed
+          ? _value.trendingproductShortDetails
+          : trendingproductShortDetails // ignore: cast_nullable_to_non_nullable
+              as TrendingProductShortDetails?,
+      trendingproductImage: trendingproductImage == freezed
+          ? _value.trendingproductImage
+          : trendingproductImage // ignore: cast_nullable_to_non_nullable
+              as TrendingProductImage?,
+      trendingproductSellerName: trendingproductSellerName == freezed
+          ? _value.trendingproductSellerName
+          : trendingproductSellerName // ignore: cast_nullable_to_non_nullable
+              as TrendingProductSellerName?,
+      trendingproductAvailableStock: trendingproductAvailableStock == freezed
+          ? _value.trendingproductAvailableStock
+          : trendingproductAvailableStock // ignore: cast_nullable_to_non_nullable
+              as TrendingProductAvailableStock?,
     ));
   }
 }
@@ -123,12 +126,12 @@ abstract class _$TrendingProductCopyWith<$Res>
       __$TrendingProductCopyWithImpl<$Res>;
   @override
   $Res call(
-      {ProductSlNo? productSlNo,
-      ProductName? productName,
-      ProductShortDetails? productShortDetails,
-      ProductImage? productImage,
-      ProductSellerName? productSellerName,
-      ProductAvailableStock? productAvailableStock});
+      {TrendingProductSlNo? trendingproductSlNo,
+      TrendingProductName? trendingproductName,
+      TrendingProductShortDetails? trendingproductShortDetails,
+      TrendingProductImage? trendingproductImage,
+      TrendingProductSellerName? trendingproductSellerName,
+      TrendingProductAvailableStock? trendingproductAvailableStock});
 }
 
 /// @nodoc
@@ -144,38 +147,38 @@ class __$TrendingProductCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? productSlNo = freezed,
-    Object? productName = freezed,
-    Object? productShortDetails = freezed,
-    Object? productImage = freezed,
-    Object? productSellerName = freezed,
-    Object? productAvailableStock = freezed,
+    Object? trendingproductSlNo = freezed,
+    Object? trendingproductName = freezed,
+    Object? trendingproductShortDetails = freezed,
+    Object? trendingproductImage = freezed,
+    Object? trendingproductSellerName = freezed,
+    Object? trendingproductAvailableStock = freezed,
   }) {
     return _then(_TrendingProduct(
-      productSlNo: productSlNo == freezed
-          ? _value.productSlNo
-          : productSlNo // ignore: cast_nullable_to_non_nullable
-              as ProductSlNo?,
-      productName: productName == freezed
-          ? _value.productName
-          : productName // ignore: cast_nullable_to_non_nullable
-              as ProductName?,
-      productShortDetails: productShortDetails == freezed
-          ? _value.productShortDetails
-          : productShortDetails // ignore: cast_nullable_to_non_nullable
-              as ProductShortDetails?,
-      productImage: productImage == freezed
-          ? _value.productImage
-          : productImage // ignore: cast_nullable_to_non_nullable
-              as ProductImage?,
-      productSellerName: productSellerName == freezed
-          ? _value.productSellerName
-          : productSellerName // ignore: cast_nullable_to_non_nullable
-              as ProductSellerName?,
-      productAvailableStock: productAvailableStock == freezed
-          ? _value.productAvailableStock
-          : productAvailableStock // ignore: cast_nullable_to_non_nullable
-              as ProductAvailableStock?,
+      trendingproductSlNo: trendingproductSlNo == freezed
+          ? _value.trendingproductSlNo
+          : trendingproductSlNo // ignore: cast_nullable_to_non_nullable
+              as TrendingProductSlNo?,
+      trendingproductName: trendingproductName == freezed
+          ? _value.trendingproductName
+          : trendingproductName // ignore: cast_nullable_to_non_nullable
+              as TrendingProductName?,
+      trendingproductShortDetails: trendingproductShortDetails == freezed
+          ? _value.trendingproductShortDetails
+          : trendingproductShortDetails // ignore: cast_nullable_to_non_nullable
+              as TrendingProductShortDetails?,
+      trendingproductImage: trendingproductImage == freezed
+          ? _value.trendingproductImage
+          : trendingproductImage // ignore: cast_nullable_to_non_nullable
+              as TrendingProductImage?,
+      trendingproductSellerName: trendingproductSellerName == freezed
+          ? _value.trendingproductSellerName
+          : trendingproductSellerName // ignore: cast_nullable_to_non_nullable
+              as TrendingProductSellerName?,
+      trendingproductAvailableStock: trendingproductAvailableStock == freezed
+          ? _value.trendingproductAvailableStock
+          : trendingproductAvailableStock // ignore: cast_nullable_to_non_nullable
+              as TrendingProductAvailableStock?,
     ));
   }
 }
@@ -184,64 +187,70 @@ class __$TrendingProductCopyWithImpl<$Res>
 
 class _$_TrendingProduct implements _TrendingProduct {
   const _$_TrendingProduct(
-      {this.productSlNo,
-      this.productName,
-      this.productShortDetails,
-      this.productImage,
-      this.productSellerName,
-      this.productAvailableStock});
+      {this.trendingproductSlNo,
+      this.trendingproductName,
+      this.trendingproductShortDetails,
+      this.trendingproductImage,
+      this.trendingproductSellerName,
+      this.trendingproductAvailableStock});
 
   @override
-  final ProductSlNo? productSlNo;
+  final TrendingProductSlNo? trendingproductSlNo;
   @override
-  final ProductName? productName;
+  final TrendingProductName? trendingproductName;
   @override
-  final ProductShortDetails? productShortDetails;
+  final TrendingProductShortDetails? trendingproductShortDetails;
   @override
-  final ProductImage? productImage;
+  final TrendingProductImage? trendingproductImage;
   @override
-  final ProductSellerName? productSellerName;
+  final TrendingProductSellerName? trendingproductSellerName;
   @override
-  final ProductAvailableStock? productAvailableStock;
+  final TrendingProductAvailableStock? trendingproductAvailableStock;
 
   @override
   String toString() {
-    return 'TrendingProduct(productSlNo: $productSlNo, productName: $productName, productShortDetails: $productShortDetails, productImage: $productImage, productSellerName: $productSellerName, productAvailableStock: $productAvailableStock)';
+    return 'TrendingProduct(trendingproductSlNo: $trendingproductSlNo, trendingproductName: $trendingproductName, trendingproductShortDetails: $trendingproductShortDetails, trendingproductImage: $trendingproductImage, trendingproductSellerName: $trendingproductSellerName, trendingproductAvailableStock: $trendingproductAvailableStock)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _TrendingProduct &&
-            (identical(other.productSlNo, productSlNo) ||
+            (identical(other.trendingproductSlNo, trendingproductSlNo) ||
                 const DeepCollectionEquality()
-                    .equals(other.productSlNo, productSlNo)) &&
-            (identical(other.productName, productName) ||
+                    .equals(other.trendingproductSlNo, trendingproductSlNo)) &&
+            (identical(other.trendingproductName, trendingproductName) ||
                 const DeepCollectionEquality()
-                    .equals(other.productName, productName)) &&
-            (identical(other.productShortDetails, productShortDetails) ||
-                const DeepCollectionEquality()
-                    .equals(other.productShortDetails, productShortDetails)) &&
-            (identical(other.productImage, productImage) ||
-                const DeepCollectionEquality()
-                    .equals(other.productImage, productImage)) &&
-            (identical(other.productSellerName, productSellerName) ||
-                const DeepCollectionEquality()
-                    .equals(other.productSellerName, productSellerName)) &&
-            (identical(other.productAvailableStock, productAvailableStock) ||
+                    .equals(other.trendingproductName, trendingproductName)) &&
+            (identical(other.trendingproductShortDetails,
+                    trendingproductShortDetails) ||
                 const DeepCollectionEquality().equals(
-                    other.productAvailableStock, productAvailableStock)));
+                    other.trendingproductShortDetails,
+                    trendingproductShortDetails)) &&
+            (identical(other.trendingproductImage, trendingproductImage) ||
+                const DeepCollectionEquality().equals(
+                    other.trendingproductImage, trendingproductImage)) &&
+            (identical(other.trendingproductSellerName,
+                    trendingproductSellerName) ||
+                const DeepCollectionEquality().equals(
+                    other.trendingproductSellerName,
+                    trendingproductSellerName)) &&
+            (identical(other.trendingproductAvailableStock,
+                    trendingproductAvailableStock) ||
+                const DeepCollectionEquality().equals(
+                    other.trendingproductAvailableStock,
+                    trendingproductAvailableStock)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(productSlNo) ^
-      const DeepCollectionEquality().hash(productName) ^
-      const DeepCollectionEquality().hash(productShortDetails) ^
-      const DeepCollectionEquality().hash(productImage) ^
-      const DeepCollectionEquality().hash(productSellerName) ^
-      const DeepCollectionEquality().hash(productAvailableStock);
+      const DeepCollectionEquality().hash(trendingproductSlNo) ^
+      const DeepCollectionEquality().hash(trendingproductName) ^
+      const DeepCollectionEquality().hash(trendingproductShortDetails) ^
+      const DeepCollectionEquality().hash(trendingproductImage) ^
+      const DeepCollectionEquality().hash(trendingproductSellerName) ^
+      const DeepCollectionEquality().hash(trendingproductAvailableStock);
 
   @JsonKey(ignore: true)
   @override
@@ -251,27 +260,31 @@ class _$_TrendingProduct implements _TrendingProduct {
 
 abstract class _TrendingProduct implements TrendingProduct {
   const factory _TrendingProduct(
-      {ProductSlNo? productSlNo,
-      ProductName? productName,
-      ProductShortDetails? productShortDetails,
-      ProductImage? productImage,
-      ProductSellerName? productSellerName,
-      ProductAvailableStock? productAvailableStock}) = _$_TrendingProduct;
+          {TrendingProductSlNo? trendingproductSlNo,
+          TrendingProductName? trendingproductName,
+          TrendingProductShortDetails? trendingproductShortDetails,
+          TrendingProductImage? trendingproductImage,
+          TrendingProductSellerName? trendingproductSellerName,
+          TrendingProductAvailableStock? trendingproductAvailableStock}) =
+      _$_TrendingProduct;
 
   @override
-  ProductSlNo? get productSlNo => throw _privateConstructorUsedError;
-  @override
-  ProductName? get productName => throw _privateConstructorUsedError;
-  @override
-  ProductShortDetails? get productShortDetails =>
+  TrendingProductSlNo? get trendingproductSlNo =>
       throw _privateConstructorUsedError;
   @override
-  ProductImage? get productImage => throw _privateConstructorUsedError;
-  @override
-  ProductSellerName? get productSellerName =>
+  TrendingProductName? get trendingproductName =>
       throw _privateConstructorUsedError;
   @override
-  ProductAvailableStock? get productAvailableStock =>
+  TrendingProductShortDetails? get trendingproductShortDetails =>
+      throw _privateConstructorUsedError;
+  @override
+  TrendingProductImage? get trendingproductImage =>
+      throw _privateConstructorUsedError;
+  @override
+  TrendingProductSellerName? get trendingproductSellerName =>
+      throw _privateConstructorUsedError;
+  @override
+  TrendingProductAvailableStock? get trendingproductAvailableStock =>
       throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)

@@ -5,20 +5,20 @@ part 'trending_product.freezed.dart';
 @freezed
 abstract class TrendingProduct with _$TrendingProduct {
   const factory TrendingProduct({
-    @required ProductSlNo? productSlNo,
-    @required ProductName? productName,
-    @required ProductShortDetails? productShortDetails,
-    @required ProductImage? productImage,
-    @required ProductSellerName? productSellerName,
-    @required ProductAvailableStock? productAvailableStock,
+    @required TrendingProductSlNo? trendingproductSlNo,
+    @required TrendingProductName? trendingproductName,
+    @required TrendingProductShortDetails? trendingproductShortDetails,
+    @required TrendingProductImage? trendingproductImage,
+    @required TrendingProductSellerName? trendingproductSellerName,
+    @required TrendingProductAvailableStock? trendingproductAvailableStock,
   }) = _TrendingProduct;
 
   factory TrendingProduct.empty() => TrendingProduct(
-        productSlNo: ProductSlNo(''),
-        productName: ProductName(''),
-        productShortDetails: ProductShortDetails(''),
-        productImage: ProductImage(''),
-        productSellerName: ProductSellerName(''),
-        productAvailableStock: ProductAvailableStock(0),
+        trendingproductSlNo: TrendingProductSlNo(''),
+        trendingproductName: TrendingProductName(''),
+        trendingproductShortDetails: TrendingProductShortDetails(''),
+        trendingproductImage: TrendingProductImage(''),
+        trendingproductSellerName: TrendingProductSellerName(''),
+        trendingproductAvailableStock: TrendingProductAvailableStock(0),
       );
 }

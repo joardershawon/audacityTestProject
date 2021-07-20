@@ -12,17 +12,21 @@ class ProductTile extends StatelessWidget {
     @required this.availableStock,
     @required this.orders,
     @required this.image,
+    @required this.currencyCode,
+    @required this.companyLogo,
   }) : super(key: key);
 
   final Size size;
 
   final String? companyName,
       image,
+      companyLogo,
       postTime,
       caption,
       price,
       availableStock,
-      orders;
+      orders,
+      currencyCode;
 
   @override
   Widget build(BuildContext context) {
@@ -57,7 +61,8 @@ class ProductTile extends StatelessWidget {
                         CircleAvatar(
                           radius: 25,
                           //*TODO : setImage //
-                          // backgroundImage: CachedNetworkImageProvider(''),
+                          backgroundImage:
+                              CachedNetworkImageProvider(companyLogo!),
                         ),
                         const SizedBox(
                           width: 10,
@@ -139,7 +144,7 @@ class ProductTile extends StatelessWidget {
                                 Icons.shop,
                               ),
                               Text(
-                                'MYR $price.00',
+                                '$currencyCode $price'.toUpperCase(),
                                 style: Theme.of(context)
                                     .textTheme
                                     .subtitle1!
