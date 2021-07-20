@@ -2,6 +2,8 @@ import 'dart:async';
 
 import 'package:audacity_test_project/domain/Products/i_products_repository.dart';
 import 'package:audacity_test_project/domain/Products/product.dart';
+import 'package:audacity_test_project/domain/newArrivals/i_new_arrivals.dart';
+import 'package:audacity_test_project/domain/newArrivals/new_arrival.dart';
 import 'package:audacity_test_project/domain/trendingProducts/i_trending_product_repository.dart';
 import 'package:audacity_test_project/domain/trendingProducts/trending_product.dart';
 import 'package:audacity_test_project/domain/trendingSellers/i_trending_sellers_repository.dart';
@@ -17,11 +19,12 @@ part 'homepage_bloc.freezed.dart';
 @injectable
 class HomepageBloc extends Bloc<HomepageEvent, HomepageState> {
   HomepageBloc(this._iProductRepository, this._iTrendingSellersRepository,
-      this._iTrendingProductRepository)
+      this._iNewArrivalsRepository, this._iTrendingProductRepository)
       : super(_Initial());
   ITrendingSellersRepository _iTrendingSellersRepository;
   ITrendingProductRepository _iTrendingProductRepository;
   IProductRepository _iProductRepository;
+  INewArrivalsRepository _iNewArrivalsRepository;
   @override
   Stream<HomepageState> mapEventToState(
     HomepageEvent event,
@@ -37,11 +40,13 @@ class HomepageBloc extends Bloc<HomepageEvent, HomepageState> {
             await _iTrendingProductRepository.watchAllTrendingProducts();
         //*Products//
         final products = await _iProductRepository.watchAllProducts();
+        final newArrivals = await _iNewArrivalsRepository.watchAllNewArrivals();
 
         yield HomepageState.loadSuccess(
           trendingSeller,
           trendingProducts,
           products,
+          newArrivals,
         );
       },
     );

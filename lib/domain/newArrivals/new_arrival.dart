@@ -1,17 +1,19 @@
-import 'package:audacity_test_project/domain/core/value_object.dart';
+import 'package:audacity_test_project/domain/newArrivals/value_objects.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
+part 'new_arrival.freezed.dart';
 
-class NewArrivalsSlNo extends ValueObject<String> {
-  final String value;
-  factory NewArrivalsSlNo(String? input) {
-    return NewArrivalsSlNo._(input!);
-  }
-  const NewArrivalsSlNo._(this.value);
-}
-
-class NewArrivalsAvailableStock extends ValueObject<int> {
-  final int value;
-  factory NewArrivalsAvailableStock(int? input) {
-    return NewArrivalsAvailableStock._(input!);
-  }
-  const NewArrivalsAvailableStock._(this.value);
+@freezed
+abstract class NewArrival with _$NewArrival {
+  const factory NewArrival({
+    @required NewArrivalsSlNo? newArrivalsSlNo,
+    @required NewArrivalsProductName? newArrivalsproNewArrivalsProductName,
+    @required NewArrivalsProductImage? newArrivalsImageNewArrivalsProductImage,
+    @required NewArrivalsShortDetails? newArrivalsShortDetails,
+  }) = _NewArrival;
+  factory NewArrival.empty() => NewArrival(
+        newArrivalsSlNo: NewArrivalsSlNo(''),
+        newArrivalsproNewArrivalsProductName: NewArrivalsProductName(''),
+        newArrivalsImageNewArrivalsProductImage: NewArrivalsProductImage(''),
+        newArrivalsShortDetails: NewArrivalsShortDetails(''),
+      );
 }

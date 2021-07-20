@@ -8,5 +8,6 @@ class HomepageState with _$HomepageState {
     List<TrendingSeller> trendingSeller,
     List<TrendingProduct> trendingProduct,
     List<Product> products,
+    List<NewArrival> newArrival,
   ) = _LoadSuccess;
 }
