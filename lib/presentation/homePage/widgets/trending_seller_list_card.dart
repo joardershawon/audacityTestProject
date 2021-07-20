@@ -60,7 +60,7 @@ class TrendingSellerListCard extends StatelessWidget {
                       sellerName!,
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 11,
+                        fontSize: size!.height * .013,
                       ),
                       textAlign: TextAlign.center,
                     ),

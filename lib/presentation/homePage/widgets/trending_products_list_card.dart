@@ -51,17 +51,19 @@ class TrendingProductsListCard extends StatelessWidget {
                   children: [
                     Expanded(
                       child: Container(
+                        height: size!.height * .05,
                         padding: const EdgeInsets.all(5),
                         color: Colors.white,
                         child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             Text(
                               productName!,
-                              // overflow: TextOverflow.ellipsis,
+                              overflow: TextOverflow.ellipsis,
                               style: TextStyle(
                                 color: Colors.black,
                                 fontWeight: FontWeight.bold,
-                                fontSize: 10,
+                                fontSize: size!.height * .013,
                               ),
                               textAlign: TextAlign.center,
                             ),
@@ -69,7 +71,7 @@ class TrendingProductsListCard extends StatelessWidget {
                               productPrice!,
                               style: TextStyle(
                                 color: Colors.grey,
-                                fontSize: 8,
+                                fontSize: size!.height * .012,
                               ),
                               textAlign: TextAlign.center,
                             ),

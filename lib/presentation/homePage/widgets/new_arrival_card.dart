@@ -54,6 +54,7 @@ class NewArrivalCard extends StatelessWidget {
                 Expanded(
                   flex: 0,
                   child: Container(
+                    height: size!.height * .05,
                     padding: const EdgeInsets.all(5),
                     color: Colors.white,
                     child: Column(
@@ -65,7 +66,7 @@ class NewArrivalCard extends StatelessWidget {
                           style: TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.bold,
-                            fontSize: 10,
+                            fontSize: size!.height * .013,
                           ),
                           textAlign: TextAlign.center,
                         ),
@@ -73,7 +74,7 @@ class NewArrivalCard extends StatelessWidget {
                           productPrice!,
                           style: TextStyle(
                             color: Colors.grey,
-                            fontSize: 8,
+                            fontSize: size!.height * .012,
                           ),
                           textAlign: TextAlign.center,
                         ),
