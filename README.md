@@ -4,14 +4,19 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Implemented:
+1. Implemented Home page using BLoC.
+2. Implemented Cache so that users can see data without internet connection.
+3. Write clean code.
+4. Maintained proper folder hierarchy.
 
-A few resources to get you started if this is your first Flutter project:
+Home page:
+Data fetched from multiple API and implemented following Items in the HomePage.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# audacityTestProject
+1. Trending Sellers
+2. Trending Products
+3. 1st three items from Products endpoint
+4. New Arrivals
+5. 2nd three items from Products endpoint
+6. New Shops
+7. Rest of the Products endpoint items.
